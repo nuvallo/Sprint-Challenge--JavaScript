@@ -8,7 +8,7 @@
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
 const dinosaurOne = {
-  name: "tyrannosaurus",
+  name: "Tyrannosaurus",
   diet: "carnivorous",
   weight: "7000kg",
   length: "12m",
@@ -20,7 +20,7 @@ const dinosaurOne = {
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 const dinosaurTwo = {
-  name: "stegosaurus",
+  name: "Stegosaurus",
   diet: "herbivorous",
   weight: "2000kg",
   length: "9m",
@@ -29,7 +29,7 @@ const dinosaurTwo = {
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
 const dinosaurThree = {
-  name: "velociraptor",
+  name: "Velociraptor",
   diet: "carnivorous",
   weight: "15kg",
   length: "1.8m",
@@ -228,7 +228,7 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
-let combo = zooAnimals.forEach(function(i) {
+let combo = zooAnimals.forEach(i => {
   displayNames.push(`Name: ${i.animal_name} Scientific: ${i.scientific_name}`);
 });
 console.log(displayNames);
@@ -248,7 +248,7 @@ The zoos are concerned about animals with a lower population count. Using filter
 
 */
 const lowPopulationAnimals = [];
-let lowerCase = zooAnimals.map(function(name) {
+let lowerCase = zooAnimals.map(name => {
   return name.animal_name.toLocaleLowerCase();
 });
 console.log(lowerCase);
@@ -259,13 +259,13 @@ The zoos need to know their total animal population across the United States. Fi
 
 */
 const populationTotal = 0;
-let totalPopulation = zooAnimals.reduce(function(runningTotal, animalTotal) {
+let totalPopulation = zooAnimals.reduce((runningTotal, animalTotal) => {
   return runningTotal + animalTotal.population;
 }, 0);
 console.log(totalPopulation);
 
 /*
 
-Stretch: If you haven't already, convert your array method callbacks into arrow functions.
+* Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
 */
